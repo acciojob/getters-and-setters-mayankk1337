@@ -5,29 +5,31 @@ class Person {
 		this._age=age;
 	}
 	get name(){
-		return this.name;
+		return this._name;
 	}
 
 	set age(value){
 		if (value<0){
 			console.log("Age cannot be in negative");
+		}else{
+			this._age=value;
 		}
-		this.age=value;
+		
 	}
 	get age(){
-		return this.age;
+		return this._age;
 	}
 }
 
 class Student extends Person {
 	study(){
-		console.log(`${this.name}is studying`)
+		console.log(`${this.name} is studying`)
 	}
 }
 
 class Teacher extends Person {
 	teach(){
-		console.log(`${this.name}is teaching`)
+		console.log(`${this.name} is teaching`)
 	}
 }
 
