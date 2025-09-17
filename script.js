@@ -1,9 +1,35 @@
 //complete this code
-class Person {}
+class Person {
+	constructor(name,age){
+		this.name=name;
+		this.age=age;
+	}
+	get name(){
+		return this.name;
+	}
 
-class Student extends Person {}
+	set age(value){
+		if (value<0){
+			console.log("Age cannot be in negative");
+		}
+		this.age=value;
+	}
+	get age(){
+		return this.age;
+	}
+}
 
-class Teacher extends Person {}
+class Student extends Person {
+	study(){
+		console.log(`${this.name}is studying`)
+	}
+}
+
+class Teacher extends Person {
+	teach(){
+		console.log(`${this.name}is teaching`)
+	}
+}
 
 // Do not change the code below this line
 window.Person = Person;
